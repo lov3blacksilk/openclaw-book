@@ -9,8 +9,8 @@ OpenClaw 多 Agent 协作遵循的通用约定。
 
 ## 文件组织
 
-- 每个 Agent 的工作区独立存放在 `content/docs/workspaces/<agent-name>/` 下
-- 共享知识存放在 `content/docs/knowledge-base/` 下
+- 每个 Agent 的工作区独立存放在 `content/docs/agents/<agent-name>/` 下
+- 共享知识存放在 `content/docs/knowledges/` 下
 - 使用软链接而非复制来关联原始文件
 
 ## 软链接规范
@@ -19,10 +19,10 @@ OpenClaw 多 Agent 协作遵循的通用约定。
 
 ```bash
 # 绝对路径链接（推荐用于本地开发）
-ln -s /absolute/path/to/source.md content/docs/workspaces/agent/target.md
+ln -s /absolute/path/to/source.md content/docs/agents/agent/target.md
 
 # 相对路径链接（推荐用于可移植性）
-cd content/docs/workspaces/agent/
+cd content/docs/agents/agent/
 ln -s ../../../../path/to/source.md target.md
 ```
 

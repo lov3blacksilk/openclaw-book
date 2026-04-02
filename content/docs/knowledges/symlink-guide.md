@@ -12,11 +12,11 @@ weight: 2
 ```
 openclaw-book/
 └── content/docs/
-    ├── workspaces/
+    ├── agents/
     │   └── agent-a/
     │       ├── _index.md
     │       └── memory.md  →  ~/.claude/projects/<project>/memory/MEMORY.md
-    └── knowledge-base/
+    └── knowledges/
         └── patterns.md    →  /path/to/shared/patterns.md
 ```
 
@@ -29,7 +29,7 @@ openclaw-book/
 ```bash
 # 链接 Claude Code 项目的记忆文件
 ln -s ~/.claude/projects/<project-path>/memory/MEMORY.md \
-  content/docs/workspaces/<agent>/memory.md
+  content/docs/agents/<agent>/memory.md
 ```
 
 ### 2. 链接项目文档
@@ -37,7 +37,7 @@ ln -s ~/.claude/projects/<project-path>/memory/MEMORY.md \
 ```bash
 # 链接项目中的文档目录
 ln -s /path/to/project/docs/architecture.md \
-  content/docs/workspaces/<agent>/architecture.md
+  content/docs/agents/<agent>/architecture.md
 ```
 
 ### 3. 链接共享知识
@@ -45,7 +45,7 @@ ln -s /path/to/project/docs/architecture.md \
 ```bash
 # 多个 Agent 共享的知识文件
 ln -s /path/to/shared/knowledge/best-practices.md \
-  content/docs/knowledge-base/best-practices.md
+  content/docs/knowledges/best-practices.md
 ```
 
 ## GitHub Pages 部署注意

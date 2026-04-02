@@ -3,9 +3,9 @@ title: 示例 Agent
 weight: 10
 ---
 
-# 示例 Agent 工作区
+# 示例 Agent
 
-这是一个示例 Agent 工作区，展示工作区的基本结构。
+这是一个示例 Agent 工作区，展示基本结构。
 
 ## 项目信息
 
@@ -20,7 +20,7 @@ weight: 10
 此工作区下的文件通过软链接关联到原始项目：
 
 ```
-content/docs/workspaces/example-agent/
+content/docs/agents/example-agent/
 ├── _index.md          # 工作区首页（本文件）
 ├── memory.md -> /path/to/project/.claude/memory/MEMORY.md
 └── notes.md -> /path/to/project/docs/notes.md

@@ -1,4 +1,4 @@
-baseURL: https://openclaw.github.io/openclaw-book/
+baseURL: https://lov3blacksilk.github.io/openclaw-book/
 title: OpenClaw Book
 theme: hugo-book
 
@@ -22,14 +22,14 @@ markup:
 menu:
   after:
     - name: "GitHub"
-      url: "https://github.com/openclaw/openclaw-book"
+      url: "https://github.com/lov3blacksilk/openclaw-book"
       weight: 10
 
 params:
   BookTheme: auto
   BookToC: true
   BookSection: docs
-  BookRepo: https://github.com/openclaw/openclaw-book
+  BookRepo: https://github.com/lov3blacksilk/openclaw-book
   BookEditPath: edit/master/content
   BookDateFormat: "2006-01-02"
   BookSearch: true

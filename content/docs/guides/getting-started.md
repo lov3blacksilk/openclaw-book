@@ -23,24 +23,24 @@ hugo server --minify
 # 浏览器访问 http://localhost:1313/openclaw-book/
 ```
 
-## 添加 Agent 工作区
+## 添加 Agent
 
-### 步骤 1：创建工作区目录
+### 步骤 1：创建 Agent 目录
 
 ```bash
-mkdir -p content/docs/workspaces/my-agent
+mkdir -p content/docs/agents/my-agent
 ```
 
 ### 步骤 2：创建索引文件
 
 ```bash
-cat > content/docs/workspaces/my-agent/_index.md << 'EOF'
+cat > content/docs/agents/my-agent/_index.md << 'EOF'
 ---
 title: My Agent
 weight: 10
 ---
 
-# My Agent 工作区
+# My Agent
 
 Agent 简介与项目概述。
 EOF
@@ -51,11 +51,11 @@ EOF
 ```bash
 # 链接记忆文件
 ln -s ~/.claude/projects/<project>/memory/MEMORY.md \
-  content/docs/workspaces/my-agent/memory.md
+  content/docs/agents/my-agent/memory.md
 
 # 链接其他文档
 ln -s /path/to/project/CLAUDE.md \
-  content/docs/workspaces/my-agent/claude-config.md
+  content/docs/agents/my-agent/claude-config.md
 ```
 
 ### 步骤 4：预览
@@ -68,7 +68,7 @@ hugo server --minify
 
 ```bash
 # 直接创建
-cat > content/docs/knowledge-base/my-topic.md << 'EOF'
+cat > content/docs/knowledges/my-topic.md << 'EOF'
 ---
 title: 我的主题
 weight: 10
@@ -78,7 +78,7 @@ weight: 10
 EOF
 
 # 或通过软链接
-ln -s /path/to/source.md content/docs/knowledge-base/my-topic.md
+ln -s /path/to/source.md content/docs/knowledges/my-topic.md
 ```
 
 ## 构建静态站点
