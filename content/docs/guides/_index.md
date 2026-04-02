@@ -9,5 +9,3 @@ bookCollapseSection: true
 OpenClaw 平台的使用说明与操作手册。
 
 ## 指南列表
-
-{{< section >}}

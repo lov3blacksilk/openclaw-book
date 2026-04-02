@@ -50,25 +50,24 @@ ln -s /path/to/shared/knowledge/best-practices.md \
 
 ## GitHub Pages 部署注意
 
-{{< hint warning >}}
-**注意**：GitHub Actions 构建时无法访问本地文件系统的软链接目标。
-
-对于需要部署到 GitHub Pages 的内容，有两种策略：
-
-1. **仓库内软链接**：确保链接目标在仓库内（使用相对路径）
-2. **CI 复制脚本**：在构建前将外部文件复制进来
-
-```yaml
-# .github/workflows/deploy.yml 中的复制步骤
-- name: Resolve symlinks
-  run: |
-    find content/ -type l | while read link; do
-      target=$(readlink "$link")
-      if [ -f "$target" ]; then
-        cp "$target" "$link.tmp"
-        rm "$link"
-        mv "$link.tmp" "$link"
-      fi
-    done
-```
-{{< /hint >}}
+> [!WARNING]
+> **注意**：GitHub Actions 构建时无法访问本地文件系统的软链接目标。
+>
+> 对于需要部署到 GitHub Pages 的内容，有两种策略：
+>
+> 1. **仓库内软链接**：确保链接目标在仓库内（使用相对路径）
+> 2. **CI 复制脚本**：在构建前将外部文件复制进来
+>
+> ```yaml
+> # .github/workflows/deploy.yml 中的复制步骤
+> - name: Resolve symlinks
+>   run: |
+>     find content/ -type l | while read link; do
+>       target=$(readlink "$link")
+>       if [ -f "$target" ]; then
+>         cp "$target" "$link.tmp"
+>         rm "$link"
+>         mv "$link.tmp" "$link"
+>       fi
+>     done
+> ```

@@ -26,6 +26,5 @@ content/docs/agents/example-agent/
 └── notes.md -> /path/to/project/docs/notes.md
 ```
 
-{{< hint info >}}
-**提示**：将此目录作为模板，为新 Agent 创建工作区。实际使用中请替换上方路径为真实项目路径。
-{{< /hint >}}
+> [!NOTE]
+> **提示**：将此目录作为模板，为新 Agent 创建工作区。实际使用中请替换上方路径为真实项目路径。
