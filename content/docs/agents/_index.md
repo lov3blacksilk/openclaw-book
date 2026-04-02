@@ -38,5 +38,3 @@ ln -s /path/to/original/file.md content/docs/agents/<agent-name>/file.md
 ```
 
 ## 当前 Agents
-
-{{< section >}}
